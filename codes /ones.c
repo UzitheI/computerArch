@@ -5,7 +5,7 @@
 int main()
 {
     char binary[SIZE + 1], onesComp[SIZE + 1];
-    int i, error=0,carry;
+    int i, error=0;
 
     printf("Enter %d bit binary value: ", SIZE);
     
@@ -36,12 +36,12 @@ int main()
     /* Marks the end of onesComp string */
     onesComp[SIZE] = '\0';
 
-   printf("One's complement of %d is %d",binary, onesComp);
-   for(int i=SIZE -1;i>=0;i++){
-    if(onesComp[i]=='1' && carry=1){
-        
+    /* Check if there are binary string contains no error */
+    if(error == 0)
+    {
+        printf("Original binary = %s\n", binary);
+        printf("Ones complement = %s", onesComp);
     }
-   }
 
     return 0;
 }

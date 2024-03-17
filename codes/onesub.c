@@ -52,28 +52,20 @@ int main(){
     scanf("%s",larger);
     printf("Enter the smaller number:");
     scanf("%s",smaller);
-
-    //determining the 1's complement of the smaller number
     strcpy( ones_smaller,ones_func(smaller));
-    // printf("%s",ones_smaller);
-    //code is correct upto here
-    // printf("%s",larger);
     strcpy(added_to_larger,addBinary(larger,ones_smaller));
-    // printf("before %s",added_to_larger);
     int final_length=strlen(added_to_larger);
     if(added_to_larger[0]=='1'){
         for (int i = 0; i < final_length-1; i++) {
             temp[i]=added_to_larger[i+1];
         }
-        // printf("after %s",temp);
         strcpy(final,addBinary(temp,oneArray));
         printf("%s",final);
-
-
     }
     else{
         printf("The answer is a %s",added_to_larger);
     }
+    printf("\n__Submitted By Ujjwal Puri__\n");
 }
 
 

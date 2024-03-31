@@ -1,6 +1,5 @@
 #include<stdio.h>
 #include<string.h>
-
 void shift_left(char binarystring[]) {
     int length = strlen(binarystring);
     char sign_bit = binarystring[0];
@@ -17,7 +16,9 @@ void shift_right(char binarystring[]) {
     for (int i = length - 1; i > 0; i--) {
         binarystring[i] = binarystring[i - 1];
     }
-    binarystring[0] = '0';
+    for(int i=length-1;i<0;i++){
+        binarystring[i]=binarystring[0];
+    }
     
     // Print the result
     printf("The string after arithmetic string right is %s", binarystring);
